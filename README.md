@@ -58,5 +58,4 @@
    - 팀장 이은아: 데이터 수집 및 레이블, 코딩(시도...???)  
    - 팀원 송미경: 코딩 및 알고리즘 구현
 7) (필요하거나, 가능할 경우) Github 저장소 개설
-   - 개설 완료 https://github.com/eunahlee-viola/2020_wiset_oss
-   - 프로젝트명이 결정되면 프로젝트명에 맞추어 Github 저장소 주소를 바꾸는 것도 좋을것 같음
+   - 개설 완료 https://github.com/seeyourcells/ver_0.0
