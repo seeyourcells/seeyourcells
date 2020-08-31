@@ -1,9 +1,0 @@
-small-polygonal
-medium-polygonal
-large-polygonal
-small-round
-small-spread
-medium-spread
-large-spread
-dividing
-spindle
