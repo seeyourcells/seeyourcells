@@ -1,6 +1,2 @@
-<<<<<<< HEAD
 data file downloaded locations : 
-=======
-data file downloaded locations : 
->>>>>>> 3fa63a0f07c4d030760d9a02a753810ea5d53845
 https://drive.google.com/file/d/16AWMUHBpC0bnm6UycTON3K_cSwTZ_H4k/view?usp=sharing
