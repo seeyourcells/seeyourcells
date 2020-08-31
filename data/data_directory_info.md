@@ -2,8 +2,8 @@
 
 [Directory 구조]
 
-<<<<<<< HEAD
 ### New labeled data: 다시 8개로 세분화 해서 label 함
+
     2020_09_labeled/ 
         P1/ 
             Annotations/ 
@@ -18,9 +18,7 @@
 
 
 ### Old labeled data: 세포 수 변화를 모델화 하기 너무 복잡해서 5개 class로 줄이니 세분화 되지 않아 인식 오류 발생
-=======
-### New labeled data
->>>>>>> 3fa63a0f07c4d030760d9a02a753810ea5d53845
+
     2020_08_labeled/ 
         P1/ # 총 388개 파일 (194개 이미지 *.jpg 파일과 *.xml 파일 같이 들어있음)
             Annotations/
@@ -46,22 +44,12 @@
             Annotations/
             JPEGImages/
             classes.txt
-<<<<<<< HEAD
-        classes.txt      
+   
 
 
 ### Old labed data: 8개의 class로 label한 data - 세포 수 변화를 모델화 하기 너무 복잡함
-=======
 
-        classes.txt       #5개의 class로 label한 data 
-
-### Old labed data
->>>>>>> 3fa63a0f07c4d030760d9a02a753810ea5d53845
     2020_07/ 
         test/P1
         train/P1
         classes.txt
-<<<<<<< HEAD
-=======
-        # 8개의 class로 label한 data - 세포 수 변화를 모델화 하기 너무 복잡
->>>>>>> 3fa63a0f07c4d030760d9a02a753810ea5d53845
