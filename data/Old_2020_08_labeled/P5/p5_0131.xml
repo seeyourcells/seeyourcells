@@ -1,0 +1,26 @@
+<annotation>
+	<folder>P5</folder>
+	<filename>0131.jpg</filename>
+	<path>F:\Raw_data_seeyourcells\Temp\newlabel\P5\0131.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>960</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>spread</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>25</xmin>
+			<ymin>107</ymin>
+			<xmax>380</xmax>
+			<ymax>419</ymax>
+		</bndbox>
+	</object>
+</annotation>
