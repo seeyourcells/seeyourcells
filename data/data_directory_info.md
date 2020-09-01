@@ -18,7 +18,7 @@
 
 
 
-### Old labeled data
+### Old labeled data (2020년 8월)
 #### 세포 수 변화를 모델화 하기 너무 복잡해서 5개 class로 줄이니 세분화 되지 않아 인식 오류 발생
 
     2020_08_labeled/ 
@@ -49,7 +49,7 @@
    
 
 
-### Old labed data
+### Old labed data (2020년 7월)
 #### 8개의 class로 label한 data - 세포 수 변화를 모델화 하기 너무 복잡함
 
     2020_07/ 
