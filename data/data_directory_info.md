@@ -14,6 +14,10 @@
             Annotations/ 
             JPEGImages/ 
             classes.txt 
+        P3/ 
+            Annotations/ 
+            JPEGImages/ 
+            classes.txt 
 
 
 
