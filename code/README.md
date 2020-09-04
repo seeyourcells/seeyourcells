@@ -9,5 +9,5 @@
 ### 세포 class 별 갯수 확인을 위한 파일
 #### xml_multi.py
 
-### 세포 class 별 갯수 확인을 위한 파일
+### 세포 class 별 갯수 결과 정리 파일
 #### xml_cell_2020 09 03.xlsx
