@@ -1,0 +1,26 @@
+<annotation>
+	<folder>P2_jingil</folder>
+	<filename>0137.jpg</filename>
+	<path>C:\Users\Jisoo_Lee\Desktop\train_P2\P2_jingil\0137.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>960</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Spread</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>904</xmin>
+			<ymin>556</ymin>
+			<xmax>1051</xmax>
+			<ymax>753</ymax>
+		</bndbox>
+	</object>
+</annotation>

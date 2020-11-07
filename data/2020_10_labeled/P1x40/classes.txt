@@ -1,0 +1,4 @@
+polygonal
+small
+spread
+Etc
