@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Flask for Object Detection</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+	 $(function(){
+		$(window).scroll(function(){
+		var navbar = $(this).scrollTop();
+		console.log(navbar);
+		// var $header = $('header');
+		var $navbar_tag = $('.navbar')
+		if(navbar > 10){
+			$navbar_tag.addClass('activated');
+		}else{
+			$navbar_tag.removeClass('activated');
+		}
+	})
+	})
+</script>
+<script type="text/javascript">
+	function previewImage(targetObj, view_area) {
+	var preview = document.getElementById(view_area); //div id
+	var ua = window.navigator.userAgent;
+
+	var files = targetObj.files;
+	for ( var i = 0; i < files.length; i++) {
+		var file = files[i];
+		var imageType = /image.*/; //이미지 파일일경우만.. 뿌려준다.
+		if (!file.type.match(imageType))
+			continue;
+		var prevImg = document.getElementById("prev_" + view_area); //이전에 미리보기가 있다면 삭제
+		if (prevImg) {
+			preview.removeChild(prevImg);
+		}
+		var img = document.createElement("img"); 
+		img.id = "prev_" + view_area;
+		img.classList.add("obj");
+		img.file = file;
+		img.style.width = '800px'; 
+		img.style.height = '500px';
+		preview.appendChild(img);
+		if (window.FileReader) { // FireFox, Chrome, Opera 확인.
+			var reader = new FileReader();
+			reader.onloadend = (function(aImg) {
+				return function(e) {
+					aImg.src = e.target.result;
+				};
+			})(img);
+			reader.readAsDataURL(file);
+		} else { // safari is not supported FileReader
+			//alert('not supported FileReader');
+			if (!document.getElementById("sfr_preview_error_"
+					+ view_area)) {
+				var info = document.createElement("p");
+				info.id = "sfr_preview_error_" + view_area;
+				info.innerHTML = "not supported FileReader";
+				preview.insertBefore(info, null);
+			}
+		}
+	}
+}
+</script>
+<style type="text/css">
+	body{
+		font-family: Objective,sans-serif;
+	}
+	/*Logo*/
+	#h_img{width: 30px; height: 30px;}
+	/*카테고리*/
+	header{
+		width:100%;
+		position:fixed;
+	}
+	.navbar{
+		opacity: 0.8;
+	}
+	.navbar.activated{
+		opacity: 1;
+	}
+	.nav-link{
+		font-weight: bold;
+	}
+	.side-page-main-div{
+		padding-top: 100px;
+	}
+	#img_box{
+		text-align: center;
+	}
+	#view_area{
+		position:relative;
+		color: black; 
+		border: 0px solid black; 
+		display: inline; 
+	}
+</style>
+
+<body>
+	<!-- 상단 카테고리 -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <a class="navbar-brand" href="/"><h3 style="color: #8C1DF3;">WYSIWYG&nbsp&nbsp&nbsp</h3></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item"><a class="nav-link" href="/convnet_info">줄기세포&nbsp&nbsp&nbsp&nbsp</a></li>
+		      <li class="nav-item"><a class="nav-link" href="/object_detection_get">줄기세포 성장 예측</a></li>
+		    </ul>
+		  </div>
+		</nav>
+	</header>
+
+	<div class="side-page-main-div"></div>
+		<h2 align="center" style="color: #8C1DF3">줄기 세포 성장 예측을 위한 Object Detection</h2>
+		<br><br>
+		<table align="center" width="1000px" border="1px">
+			<tr>
+				<td width="30%" >
+					<br>&nbsp&nbsp체크포인트1.세포 노화 정도<br>
+					<br>&nbsp&nbsp체크포인트2.예상 계대 시점<br>
+					<br>&nbsp&nbsp체크포인트3.예상 세포 수율<br>
+					<br>&nbsp&nbsp체크포인트4.세포 활성 Grade<br><br>
+				</td>
+				<td width="70%" rowspan="3">
+					<div align="center" id='view_area'></div>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%">
+					<br>&nbsp&nbsp분석을 위한 입력 정보<br><br>
+					&nbsp&nbsp&nbsp&nbsp<select name="Species">
+						<option value="Human">Human</option>
+						<option value="Rabbit">Rabbit</option>
+						<option value="Mouse/Rat">Mouse/Rat</option>
+					</select><br>
+					&nbsp&nbsp&nbsp&nbsp<select name="Cell type">
+						<option value="중배엽성 줄기세포">중배엽성 줄기세포</option>
+						<option value="연골세포">연골세포</option>
+					</select><br>
+					&nbsp&nbsp&nbsp&nbsp<select name="Passage">
+						<option value="Passage 1">Passage 1</option>
+						<option value="Passage 2">Passage 2</option>
+						<option value="Passage 3">Passage 3</option>
+						<option value="Passage 4">Passage 4</option>
+						<option value="Passage 5">Passage 5</option>
+						<option value="Passage 6">Passage 6</option>
+						<option value="Passage 7">Passage 7</option>
+					</select><br><br>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%">
+					<!-- Detection할 이미지 업로드 -->
+					<form action="/object_detection_post" method="POST" enctype="multipart/form-data">
+						<br>&nbsp&nbspUpload Your Image<br><br>
+						<div align="center">
+							<input type="file" name="object_img" id="object_img" value="object_img" onchange="previewImage(this,'view_area')"/><br><br>
+							<input type="submit" value="결과 확인"/>
+						</div><br>
+					</form>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+</body>
+</html>
