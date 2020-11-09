@@ -59,7 +59,7 @@
     - 개설 완료 https://github.com/seeyourcells/seeyourcells
 
 [Web page 링크]   
-    - 경희대학교 TERM lab 웹 페이지: term.khu.ac.kr [term.khu.ac.kr]
+    - 경희대학교 TERM lab 웹 페이지: [term.khu.ac.kr](term.khu.ac.kr)
 
 
 
