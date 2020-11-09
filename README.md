@@ -1,8 +1,6 @@
-﻿# 프로젝트명: See_your_cells (네 세포를 알라)
+﻿# 프로젝트명: See_your_cells
 
-## 개발 개요
-
-### 2020 공개 SW 개발자대회 참가 출품작(팀명: WYSIWYG) 
+## 개발 개요 - 2020 공개 SW 개발자대회 참가 출품작(팀명: WYSIWYG) 
 
 ### 개발배경
     
@@ -53,5 +51,14 @@
      - 팀장 이은아: 데이터 수집, 레이블, 세포 상태 분석실험   
      - 팀원 송미경: 코딩 및 알고리즘 구현   
 
+
+## Web UI 기반 공개SW 공개 마일스톤   
+   
 [Github 저장소 개설]   
-    - 개설 완료 https://github.com/seeyourcells/ver_0.0
+    - 개설 완료 https://github.com/seeyourcells/seeyourcells
+
+[Web page 링크]   
+    - 경희대학교 TERM lab 웹 페이지: term.khu.ac.kr
+
+
+
