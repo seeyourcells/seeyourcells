@@ -52,13 +52,14 @@
      - 팀원 송미경: 코딩 및 알고리즘 구현   
 
 
-## Web UI 기반 공개SW 공개 마일스톤   
+
+## Web UI 기반 SW 공개 마일스톤   
    
 [Github 저장소 개설]   
     - 개설 완료 https://github.com/seeyourcells/seeyourcells
 
 [Web page 링크]   
-    - 경희대학교 TERM lab 웹 페이지: term.khu.ac.kr
+    - 경희대학교 TERM lab 웹 페이지: term.khu.ac.kr [term.khu.ac.kr]
 
 
 
