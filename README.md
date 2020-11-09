@@ -61,7 +61,7 @@
 [Web page 링크]   
     - 경희대학교 TERM lab 웹 페이지: [http://term.khu.ac.kr](http://term.khu.ac.kr)
 
-[향후 계획]
+[향후 계획]     
     - 2021. 2월까지 실험실 내 Data로 검증 완료 & 거버넌스 구조 확정    
     - 2021. 3월부터 SNS 및 관련 학회 발표를 통한 Research community에 공개    
     - 향후 지속적으로 적용 가능한 cell type 확대    
