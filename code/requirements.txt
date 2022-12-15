@@ -1,0 +1,9 @@
+numpy
+flask
+pillow
+opencv-python
+requests
+keras
+cython
+tensorflow-gpu==1.15.0
+
